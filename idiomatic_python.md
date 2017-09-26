@@ -9,14 +9,16 @@ The code examples and direct quotes are all from Raymond's talk. I've reproduced
 ```python
 for i in [0, 1, 2, 3, 4, 5]:
     print i**2
-
-for i in range(6):
-    print i**2
 ```
 
 ### Better
 
 ```python
+# python 3
+for i in range(6):
+    print i**2
+    
+# python 2
 for i in xrange(6):
     print i**2
 ```

@@ -92,6 +92,11 @@ for name, color in zip(names, colors):
 ### Better
 
 ```python
+# python 3
+for name, color in zip(names, colors):
+    print name, '--->', color
+    
+# python 2
 for name, color in izip(names, colors):
     print name, '--->', color
 ```
@@ -231,10 +236,14 @@ Note: in python 3 there is no `iteritems()` and `items()` behaviour is close to 
 names = ['raymond', 'rachel', 'matthew']
 colors = ['red', 'green', 'blue']
 
+# python 3
+d = dict(zip(names, colors))
+# {'matthew': 'blue', 'rachel': 'green', 'raymond': 'red'}
+
+# python 2
 d = dict(izip(names, colors))
 # {'matthew': 'blue', 'rachel': 'green', 'raymond': 'red'}
 ```
-For python 3: `d = dict(zip(names, colors))`
 
 ## Counting with dictionaries
 

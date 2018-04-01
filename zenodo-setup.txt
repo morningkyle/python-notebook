@@ -12,7 +12,7 @@ docker-compose up db es cache mq
 
 (4) Check and clean OS default python environment.  Uninstall python2 and keep/install python3 only.
 
-(5) Install 2 python modules virtualenv and virtualenvwrapper.
+(5) Install 2 python modules: virtualenv and virtualenvwrapper.
 pip install virtualenv
 pip install virtualenvwrapper
 
@@ -21,10 +21,10 @@ curl -sL https://deb.nodesource.com/setup_6.x | bash - && apt-get -qy install --
 
 (7) Create virtual python environment
 mkdir /home/envs
-append following lines to the end of ~/.bashrc file:
-export WORKON_HOME=home/.virtualenvs
-export PROJECT_HOME=home/envs
-source /usr/local/bin/virtualenvwrapper.sh
+### Append following 3 lines to the end of ~/.bashrc file:
+    export WORKON_HOME=home/.virtualenvs
+    export PROJECT_HOME=home/envs
+    source /usr/local/bin/virtualenvwrapper.sh
 mkvirtualenv zenodo
 
 (8) Build zenodo on host os, this should be done under virtual python environment created in step7.

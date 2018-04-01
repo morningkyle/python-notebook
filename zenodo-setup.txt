@@ -1,0 +1,41 @@
+Host: Debian OS
+
+(1) download source to host OS
+$ cd ~/src/
+$ git clone https://github.com/zenodo/zenodo.git
+
+(2) Build docker images and containers
+docker-compose build
+
+(3) Start docker containers build in step2. This step could be done before step9.
+docker-compose up db es cache mq
+
+(4) Check and clean OS default python environment.  Uninstall python2 and keep/install python3 only.
+
+(5) Install 2 python modules virtualenv and virtualenvwrapper.
+pip install virtualenv
+pip install virtualenvwrapper
+
+(6) Install nodejs on host os
+curl -sL https://deb.nodesource.com/setup_6.x | bash - && apt-get -qy install --fix-missing --no-install-recommends nodejs 
+
+(7) Create virtual python environment
+mkdir /home/envs
+append following lines to the end of ~/.bashrc file:
+export WORKON_HOME=home/.virtualenvs
+export PROJECT_HOME=home/envs
+source /usr/local/bin/virtualenvwrapper.sh
+mkvirtualenv zenodo
+
+(8) now build zenodo on host os again, this should be done under virtual zenodo environment.
+(zenodo)$
+(zenodo)$ cd ~/src/zenodo
+(zenodo)$ pip install -r requirements.txt --src ~/src/ --pre --upgrade
+(zenodo)$ pip install -e .[all,postgresql,elasticsearch2]
+(zenodo)$ ./scripts/setup-npm.sh
+(zenodo)$ ./scripts/setup-assets.sh
+
+(9) Initialize zenodo:
+(zenodo)$ ./scripts/init.sh
+
+

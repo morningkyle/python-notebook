@@ -21,7 +21,7 @@ curl -sL https://deb.nodesource.com/setup_6.x | bash - && apt-get -qy install --
 
 (7) Create virtual python environment
 mkdir /home/envs
-### Append following 3 lines to the end of ~/.bashrc file:
+### Append following 3 lines to the end of ~/.bashrc file, and do "source ~/.bashrc" after saving the file.
     export WORKON_HOME=home/.virtualenvs
     export PROJECT_HOME=home/envs
     source /usr/local/bin/virtualenvwrapper.sh

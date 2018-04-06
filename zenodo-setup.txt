@@ -17,7 +17,10 @@ pip install virtualenv
 pip install virtualenvwrapper
 
 (6) Install nodejs on host os
-sudo curl -sL https://deb.nodesource.com/setup_6.x | sudo bash - && sudo apt-get -qy install --fix-missing --no-install-recommends nodejs 
+# Install Node.js 7.x repository
+sudo curl -sL https://deb.nodesource.com/setup_7.x | sudo bash -
+# Install Node.js and npm
+apt-get install -y nodejs
 
 (7) Create virtual python environment
 mkdir /home/envs

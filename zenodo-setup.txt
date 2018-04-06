@@ -21,9 +21,10 @@ curl -sL https://deb.nodesource.com/setup_6.x | bash - && apt-get -qy install --
 
 (7) Create virtual python environment
 mkdir /home/envs
-### Append following 3 lines to the end of ~/.bashrc file, and do "source ~/.bashrc" after saving the file.
-    export WORKON_HOME=home/.virtualenvs
-    export PROJECT_HOME=home/envs
+### Append following 3 lines to the end of ~/.bashrc file, and do "source ~/.bashrc" after saving the file. 
+### The path on the 3rd line should be the actual path where virtualenvwrapper.sh is installed.
+    export WORKON_HOME=$HOME/.virtualenvs
+    export PROJECT_HOME=$HOME/envs
     source /usr/local/bin/virtualenvwrapper.sh
 mkvirtualenv zenodo
 

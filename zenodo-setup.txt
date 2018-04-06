@@ -36,7 +36,6 @@ mkvirtualenv zenodo
 (zenodo)$ cd ~/src/zenodo
 (zenodo)$ pip install -r requirements.txt --src ~/src/ --pre --upgrade
 (zenodo)$ pip install -e .[all,postgresql,elasticsearch2]
-(zenodo)$ sudo ./scripts/setup-npm.sh
 (zenodo)$ ./scripts/setup-npm.sh
 (zenodo)$ ./scripts/setup-assets.sh
 

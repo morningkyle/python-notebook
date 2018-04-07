@@ -1,4 +1,4 @@
-Host: Debian OS
+Host: Ubuntu OS
 
 (1) Download source to host OS
 $ cd ~/src/

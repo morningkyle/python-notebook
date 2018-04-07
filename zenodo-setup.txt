@@ -36,7 +36,13 @@ mkvirtualenv zenodo
 (zenodo)$ cd ~/src/zenodo
 (zenodo)$ pip install -r requirements.txt --src ~/src/ --pre --upgrade
 (zenodo)$ pip install -e .[all,postgresql,elasticsearch2]
-(zenodo)$ sudo ./scripts/setup-npm.sh  # install nodejs modules system-wide
+(zenodo)$ sudo ./scripts/setup-npm.sh
+# install nodejs modules system-wide. Output when finished:
+# /usr/lib
+# ├── clean-css@3.4.19 
+# ├── node-sass@3.8.0 
+# ├── requirejs@2.2.0 
+# └── uglify-js@2.7.3 
 (zenodo)$ ./scripts/setup-assets.sh
 
 (9) Initialize zenodo:

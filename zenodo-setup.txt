@@ -44,6 +44,36 @@ mkvirtualenv zenodo
 # ├── requirejs@2.2.0 
 # └── uglify-js@2.7.3 
 (zenodo)$ ./scripts/setup-assets.sh
+# Output when finished:
+# 474 of 474 files already present
+# Done collecting.
+# Building bundle: gen/search.%(version)s.js
+# Building bundle: gen/zenodo.search.%(version)s.js
+# Building bundle: gen/styles.%(version)s.css
+# Building bundle: gen/packed.%(version)s.js
+# Building bundle: gen/pdfjs.%(version)s.css
+# Building bundle: gen/deposit.%(version)s.js
+# Building bundle: gen/pdfjs.%(version)s.js
+# Building bundle: gen/github.%(version)s.js
+# Building bundle: gen/prism.%(version)s.css
+# Building bundle: gen/deposit.%(version)s.css
+# Building bundle: gen/zenodo.%(version)s.css
+# Building bundle: gen/communities.%(version)s.js
+# Building bundle: gen/csv_previewer.%(version)s.js
+# Building bundle: gen/styles.admin.%(version)s.css
+# Building bundle: gen/admin.%(version)s.js
+# Building bundle: gen/fullscreen.%(version)s.js
+# Building bundle: gen/github.%(version)s.css
+# Building bundle: gen/deposit.dependencies.%(version)s.js
+# Building bundle: gen/zenodo.%(version)s.js
+# Building bundle: gen/zenodo.deposit.%(version)s.js
+# Building bundle: gen/i18n.%(version)s.js
+# Building bundle: gen/prism.%(version)s.js
+# Building bundle: gen/styles.admin-lte.%(version)s.css
+# Building bundle: gen/translations/invenio-search-ui.js
+# Building bundle: gen/search.%(version)s.css
+# Building bundle: gen/communities.%(version)s.css
+
 
 (9) Initialize zenodo:
 (zenodo)$ ./scripts/init.sh

@@ -7,10 +7,20 @@ $ git clone https://github.com/zenodo/zenodo.git
 (2) Build docker images and containers
 docker-compose build
 
-(3) To start test the building result, run following command and input http://localhost:5000/ in browser.
-docker-compose up
+(3) To start test the building result, run following command and then input http://localhost:5000/ in browser.
 # Add "INVENIO_CELERY_BROKER_URL=amqp://guest:guest@mq:5672//" to zenodo/docker-services.yml environment variable 
-# if failed to start mq
+# if failed to start mq.
+docker-compose up
+# Output:
+# user@machine:~/src/zenodo$ docker-compose up
+# Starting zenodo_db_1     ... done
+# Starting zenodo_mq_1     ... done
+# Starting zenodo_cache_1  ... done
+# Starting zenodo_static_1 ... done
+# Starting zenodo_es_1     ... done
+# Starting zenodo_flower_1 ... done
+# Starting zenodo_web_1    ... done
+# Starting zenodo_worker_1 ... done
 
 (3) Start docker containers build in step2. This step could be done before step9.
 docker-compose up db es cache mq

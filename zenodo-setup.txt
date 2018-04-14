@@ -13,8 +13,8 @@ docker-compose up db es cache mq
 (4) Check and clean OS default python environment.  Uninstall python2 and keep/install python3 only.
 
 (5) Install 2 python modules: virtualenv and virtualenvwrapper.
-pip install virtualenv
-pip install virtualenvwrapper
+sudo apt-get install python-virtualenv
+sudo apt-get install virtualenvwrapper
 
 (6) Install nodejs on host os
 # Install Node.js 7.x repository

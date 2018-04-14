@@ -41,9 +41,11 @@ mkvirtualenv zenodo
 # install nodejs modules system-wide. Output when finished:
 # /usr/lib
 # ├── clean-css@3.4.19 
-# ├── node-sass@3.8.0 
+# ├─┬ node-sass@3.8.0 
+# │ └─┬ request@2.85.0
+# │   └── aws4@1.7.0 
 # ├── requirejs@2.2.0 
-# └── uglify-js@2.7.3 
+# └── uglify-js@2.7.3
 
 (zenodo)$ ./scripts/setup-assets.sh
 # Output when finished:

@@ -388,3 +388,5 @@ DETAIL:  Key (email)=(info@zenodo.org) already exists.
 Loaded 0 communities (skipped 2 existing).
 
 
+Add - "INVENIO_CELERY_BROKER_URL=amqp://guest:guest@mq:5672//"  to zenodo/docker-services.yml environment variable.
+

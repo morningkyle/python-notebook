@@ -11,6 +11,7 @@ docker-compose build
 docker-compose up db es cache mq
 
 (4) Check and clean OS default python environment. Install python3 and make it as the default python env.
+sudo apt-get update
 sudo apt-get install -y python3-pip
 # add following 2 lines to ~/.bashrc file to make python3 as default.
 # alias python=python3
